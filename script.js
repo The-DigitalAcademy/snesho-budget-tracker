@@ -3,7 +3,7 @@ var state = {
     income: 0,
     expense: 0,
     transaction = [
-        {name: }
+        {name:'',amount: 0, type: income}
     ],
 }
     
