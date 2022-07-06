@@ -10,6 +10,8 @@ var state = {
 }
 
 function init() {
-    console.log(balance);
+    console.log('balance');
 }
+
+init();
     
