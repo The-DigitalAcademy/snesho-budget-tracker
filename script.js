@@ -7,23 +7,22 @@ const text = document.getElementById("text");
 const amount = document.getElementById("amount");
 
 
-var balanceEl = document.querySelector('#balance');
-var incomeEl = document.querySelector('#income');
-var expenseEl = document.querySelector('#expense');
-var transactionsEl = document.querySelector('#transaction');
+const dummyTransactions = [
+    { id: 1, text: "flower", amount: -20 },
+    { id: 2, text: "Salary", amount: 300 },
+    { id: 3, text: "Book", amount: -10 },
+    { id: 4, text: "Camera", amount: 150 },
+];
 
-function init() {
-    balanceEl.innerHTML = `R${state.balance}`;
-    incomeEl.innerHTML = `R${state.income}`;
-    expenseEl.innerHTML = `R${state.expense}`;
+function addTransactionDom(transaction) {
+    //Get sign
+    const dign = transaction.amount > 0 ? "+" : "-";
 
-    var transactionsEl; 
+    const icon = transaction.amount > 0 ? "up" : "down";
 
-    for (var i = 0; i < state.transactions.length; i++) {
-        
-    }
+    const item = document.createElement("li");
+
+    item.classList.add(transaction > 0 ? "plus" : "minus");
+
+    item.innerHTML
 }
-
-
-init();
-    
