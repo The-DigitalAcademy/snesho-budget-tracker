@@ -16,24 +16,34 @@
 <br><br>
 <div class="card card text-bg-primary mb-3 d-grid gap-2 col-6 mx-auto" style="width: 20rem;">
     <div class="card-body">
-        <div class="balance"></div>
+      <div class="balance">
+        <h1>Balance</h1>
         <div id="balance">R0</div>
+      </div>
     </div>
   </div>
 <br>
 <div class="card text-bg-success p-3 d-grid gap-2 col-6 mx-auto" style="width: 20rem;">
     <div class="card-body">
-        <li class="list-group-item">INCOME</li>
-        <div id="income">R0</div>
+        <div class="inc-exp-container">
+          <div class="income">
+            <h1>Income</h1>
+            <div id="income">R0</div>
+          </div>
+        </div> 
     </div>
 </div>
 <br><br>
-    <div class="card text-bg-danger p-3 d-grid gap-2 col-5 mx-auto" style="width: 20rem;">
-      <div class="card-body">
-        <li class="list-group-item">EXPENSE</li>
-        <div class="expense">R0</div>
-      </div>
-      </div>
+<div class="card text-bg-danger p-3 d-grid gap-2 col-6 mx-auto" style="width: 20rem;">
+  <div class="card-body">
+      <div class="inc-exp-container">
+        <div class="expense">
+          <h1>Expense</h1>
+          <div id="expense">R0</div>
+        </div>
+      </div> 
+  </div>
+</div>
       <br><br>
         <div class="form-container card text-bg-primary mb-3 d-grid gap-2 col-2 mx-auto btn btn-primary btn-lg" style="width: 20rem;">
             <input type="text" id="name" placeholder="Enter type">
