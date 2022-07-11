@@ -1,1 +1,2 @@
-# snesho-budget-tracker
+# snesho-budget tracker 
+[link]{https://the-digitalacademy.github.io/snesho-budget-tracker/}

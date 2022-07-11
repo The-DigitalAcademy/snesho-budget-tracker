@@ -24,5 +24,5 @@ function addTransactionDom(transaction) {
 
     item.classList.add(transaction > 0 ? "plus" : "minus");
 
-    item.innerHTML
+    item.innerHTML = <h4>${transaction.text}</h4> <span>${sign}$${transaction.anount}</span>
 }
