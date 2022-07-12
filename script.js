@@ -14,6 +14,8 @@ const dummyTransactions = [
     { id: 4, text: "Camera", amount: 150 },
 ];
 
+let transaction
+
 function addTransactionDom(transaction) {
     //Get sign
     const dign = transaction.amount > 0 ? "+" : "-";
@@ -24,5 +26,13 @@ function addTransactionDom(transaction) {
 
     item.classList.add(transaction > 0 ? "plus" : "minus");
 
-    item.innerHTML = `<h4>${transaction.text}</h4> <>${sign}$${transaction.anount}<i class="fas fa-caret-${icon}"></i><i class="fas fa-trash-alt"></i></span>`
+    item.innerHTML = `<h4>${transaction.text}</h4> <>${sign}$${transaction.anount}<i class="fas fa-caret-${icon}"></i><i class="fas fa-trash-alt"></i></span>`;
+
+    list.appendChild(item);
+}
+
+//init
+
+function init() {
+    list.innerHTML = ''
 }
