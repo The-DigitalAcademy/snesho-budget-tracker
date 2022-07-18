@@ -1,5 +1,32 @@
+//varaiable
+
+$black-50:
+$green:
+$red:
+$white:
+$gray:
+$medium: 500;
+
 body {
-    background-color: rgb(181, 166, 166);
+    background-color: rgb(245, 241, 241);
     text-align: center;
-    
+    display: flex; 
+    align-items: center; 
+    justify-content: center; 
+    min-height: 100vh;
 }
+
+.container {
+    background-color:gray;
+    width: 75rem;
+    padding: 5rem;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem black;
+.expense-title {
+    font-size: 5.rem;
+    font-weight: $bold;
+    text-align: center;
+    padding-top: 5rem;
+    padding-bottom: 4rem;
+}
+}
+
