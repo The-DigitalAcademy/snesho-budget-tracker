@@ -4,9 +4,39 @@
   <meta charset="UTF-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
+  <title>SINESIPHO</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
 <body>
-  
+  <!-- As a heading -->
+  <div class="Application">
+    <h1 class="header">BUDGET TRACKER</h1>
+
+    <div class="balance-container">
+      <div class="Lead">BALANCE: R<span>500</span></div>
+      <div class="Lead">INCOME: R<span>500</span></div>
+      <div class="Lead">EXPENSE: R<span>500</span></div>
+    </div>
+<!--Balance-->
+    <div class="-add-balance">
+      <input type="text" placeholder="Detail" />
+      <input type="number" placeholder="Detail" />
+      <div class="btn-group">
+        <button>+ INCOME</button>
+        <button>- EXPENSE</button>
+      </div>
+    </div>
+
+    <div class="transaction-container">
+      <div class="transaction">
+        <span class="text">Salary</span>
+        <span class="income">INCOME</span>
+        <span class="amount">R1500</span>
+        <button>x</button>
+      </div>
+    </div>
+</div>
+
+<script src="./script.js"></script>
 </body>
 </html>
