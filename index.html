@@ -33,20 +33,28 @@
       <div class="inc-exp-container">
         <div class="expense">
           <h1>Expense</h1>
-          <div id="expense">R0.00 <i class="fa-solid fa-caret-up"></i></i></div>
+          <div id="expense">R0.00 <i class="fa-solid fa-sort-down"></i></i></i></i></div>
         </div>
       </div> 
 <!--History-->
   <h2 class="title-history">History</h2>
   <ul class="history-box" id="list">
-    <div class="plus"><h4>Payment</h4><span>+R100</span></div>
-  </ul>
+    <div class="plus">
+      <h4>Payment</h4>
+      <span>+R100
+        <i class="fa-solid fa-caret-up"></i>
+        <i class="fas fa-trash-alt"></i>
+      </span>
+    </ul>
+    </div>
 <!--Add Transaction-->
-  <h2 class="transaction-title">Add New Transaction</h2>
+<div class="box">
+  <h2 class="transaction-title-">Add New Transaction</h2>
   <input type="text" id="text" class="for-text" placeholder="Insert text here (Salary)">
   <input type="number" id="amount" class="for-amount" placeholder="Insert text here (Salary)">
   <button>Add Transaction</button>
 </div>
+  
     <script src="./script.js"></script>
   </body>
 </html>
