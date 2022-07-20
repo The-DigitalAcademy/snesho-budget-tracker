@@ -47,13 +47,23 @@ body {
     color: blue;
 }
 
+.btn-income button {
+    background-color: red;
+    color: white
+}
+
+.btn-expense button {
+    background-color: green;
+    color: white;
+}
+
 .add-container  {
     display: flex;
     flex-direction: column;
     gap: 0.5rem;
     border: solid 1px #525252;
     padding: 1rem;
-    background-color: #faf9f9;
+    color: #221098;
 }
 
 .add-container input {
@@ -65,4 +75,8 @@ body {
     padding: 0.5rem;
     cursor: pointer;
     color: white;
+}
+
+.inc-exp-container {
+    text-align: center;
 }

@@ -17,13 +17,15 @@
       <div class="Lead">INCOME: R<span>500</span></div>
       <div class="Lead">EXPENSE: R<span>500</span></div>
     </div>
+    <br>
 <!--Balance-->
     <div class="-add-balance">
-      <input type="text" placeholder="Detail" />
-      <input type="number" placeholder="Detail" />
+      <input type="text" placeholder="Detail" id="detail"/>
+      <input type="number" placeholder="Detail" id="amount"/>
+      <br><br>
       <div class="btn-group">
-        <button>+ INCOME</button>
-        <button>- EXPENSE</button>
+        <button class="btn-income" onClick="addIncome()">+ INCOME</button>
+        <button class="btn-expense" onClick="addexpense()">- EXPENSE</button>
       </div>
     </div>
 
