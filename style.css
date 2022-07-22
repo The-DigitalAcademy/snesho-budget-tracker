@@ -120,6 +120,19 @@ h2{
     color: rgb(51, 46, 46);
     padding: 5px;
     border-radius: 3px;
+    margin-right: 5px;
+}
+
+#transaction li .income-amt {
+    background-color: var(--income);
+}
+
+#transaction li .expense-amt {
+    background-color: var(--expense);
+}
+
+#transaction li button {
+    padding: 5px 10px 5px 10px;
 }
 
 #remove {
