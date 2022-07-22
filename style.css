@@ -39,7 +39,12 @@ body {
     box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #464853;
 }
 
-#balance {
+h2{
+    margin-right: 15px;
+    margin-left: 15px;
+}
+
+#balance-container {
     font-weight: bold;
     height: 2rem;
     color:rgb(192, 85, 53);
@@ -49,6 +54,15 @@ body {
     box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #464853;
 }
 
+.cashflow-container{
+    margin-right: 15px;
+    display: flex;
+    box-shadow: var(--box-shadow);
+    align-items: center;
+    justify-content: center;
+    padding-bottom: 20px;
+}
+
 .history {
     text-align: left;
     border: solid 1px;
@@ -56,25 +70,34 @@ body {
     padding-bottom: 0.5rem;
 
 }
-
-.income {
-    margin-right: 15px;
-    width: 7rem;
-    height: 3rem;
-    background-color: #da4a4a;
-    margin-bottom: 0.5rem;
-    color: #faf9f9;
-    box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #464853;
+#income{
+    color: #0f8a42;
 }
 
-.expense {
-    margin-left: 15px;
+#expense{
+    color: #da4a4a;
+}
+
+.incomeBtn {
+    margin-right: 15px;
     width: 7rem;
     height: 3rem;
     background-color: #0f8a42;
     margin-bottom: 0.5rem;
     color: #faf9f9;
     box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #464853;
+    cursor: pointer;
+}
+
+.expenseBtn {
+    margin-left: 15px;
+    width: 7rem;
+    height: 3rem;
+    background-color: #da4a4a;
+    margin-bottom: 0.5rem;
+    color: #faf9f9;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #464853;
+    cursor: pointer;
 }
 
 #transaction{
