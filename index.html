@@ -6,37 +6,69 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>SINESIPHO</title>
   <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 </head>
 <body>
   <!-- As a heading -->
+
   <div class="Application">
     <h1 class="header">BUDGET TRACKER</h1>
-
-    <div class="balance-container">
-      <div class="Lead">BALANCE: R<span>500</span></div>
-      <div class="Lead">INCOME: R<span>500</span></div>
-      <div class="Lead">EXPENSE: R<span>500</span></div>
-    </div>
+    <br>  
+  <div class="balance">
+    <h4>BALANCE</h4>
     <br>
-<!--Balance-->
-    <div class="-add-balance">
-      <input type="text" placeholder="Detail" id="detail"/>
-      <input type="number" placeholder="Detail" id="amount"/>
-      <br><br>
-      <div class="btn-group">
-        <button class="btn-income" onClick="addIncome()">+ INCOME</button>
-        <button class="btn-expense" onClick="addexpense()">- EXPENSE</button>
-      </div>
-    </div>
+    <h1 id="balance">R0</h1>
+  </div>
+    <br>
+  <div class="btn-group">
+    <button class="income" onClick="addIncome()">+ INCOME</button>
+    <button class="expense" onClick="addExpense()">- EXPENSE</button>
+  </div>
+   <br>
 
-    <div class="transaction-container">
-      <div class="transaction">
-        <span class="text">Salary</span>
-        <span class="income">INCOME</span>
-        <span class="amount">R1500</span>
-        <button>x</button>
-      </div>
-    </div>
+  <!--history-->
+
+  <div class="transaction-container">
+    <h2>Transcation History</h2>
+
+    <ul id="transaction">
+      <li>
+        Salary
+        <div>
+          <span class="income-amt">R5000</span>
+          <i class="fa-solid fa-trash-can"></i>
+        </div>
+      </li>
+
+      <li>
+        Buy
+        <div>
+          <span class="expense-amt">R50</span>
+          <i class="fa-solid fa-trash-can"></i>
+        </div>
+      </li>
+
+      <li>
+        Transport
+        <div>
+          <span class="expense-amt">R500</span>
+          <i class="fa-solid fa-trash-can"></i>
+        </div>
+      </li>
+    </ul>
+  </div>
+  <br>
+
+  <!--transaction-->
+
+  <div class="transaction">
+    <h2 id="transaction-title">Add New Transcation</h2>
+    <input type="text" id="text" class="for-text" placeholder="insert text here">
+    <br><br>
+    <input type="number" id="number" class="for-number" placeholder="insert text here">
+  </div>
+  <br>
+  <button>Add Transcation</button>
 </div>
 
 <script src="./script.js"></script>

@@ -1,3 +1,7 @@
+:root{
+    --box-shadow: 0px 1px 4px 1px rgba(199,199,199,1);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -14,7 +18,7 @@ body {
 }
 
 .Application {
-    background-color: rgb(240, 244, 247);
+    background-color: rgb(229, 233, 237);
     height: 800px;
     width: 500px;
     padding: 1rem;
@@ -23,60 +27,85 @@ body {
     text-align: center;
     border-radius: 1rem;
     border: solid 1px;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #464853;
 }
 
 .header {
     font-weight: bold;
     margin-top: 1rem;
-    border: solid 1px #faf9f9;
     padding: 1rem;
     background-color: #da4a4a;
     color: white;
-}
-
-.balance-container {
-    display: flex;
-    flex-direction: column;
-    font-size: 1.3rem;
-    letter-spacing: 2px;
-    font-weight: bold;
-    color: #0a0808;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #464853;
 }
 
 #balance {
-    color: blue;
-}
-
-.btn-income button {
-    background-color: red;
-    color: white
-}
-
-.btn-expense button {
-    background-color: green;
-    color: white;
-}
-
-.add-container  {
+    font-weight: bold;
+    height: 2rem;
+    color:rgb(192, 85, 53);
     display: flex;
     flex-direction: column;
-    gap: 0.5rem;
-    border: solid 1px #525252;
-    padding: 1rem;
-    color: #221098;
+    justify-content: center;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #464853;
 }
 
-.add-container input {
-    padding: 0.5rem;
-    outline: none;
+.history {
+    text-align: left;
+    border: solid 1px;
+    font-size: 1rem;
+    padding-bottom: 0.5rem;
+
 }
 
-.add-container button {
-    padding: 0.5rem;
-    cursor: pointer;
-    color: white;
+.income {
+    margin-right: 15px;
+    width: 7rem;
+    height: 3rem;
+    background-color: #da4a4a;
+    margin-bottom: 0.5rem;
+    color: #faf9f9;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #464853;
 }
 
-.inc-exp-container {
-    text-align: center;
+.expense {
+    margin-left: 15px;
+    width: 7rem;
+    height: 3rem;
+    background-color: #0f8a42;
+    margin-bottom: 0.5rem;
+    color: #faf9f9;
+    box-shadow: 0.1rem 0.1rem 0.5rem 0.1rem #464853;
 }
+
+#transaction{
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+#transaction li {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding: 10px;
+    margin-bottom: 10px;
+    box-shadow: var(--box-shadow);
+}
+
+#transaction li span{
+    display: inline-block;
+    color: rgb(51, 46, 46);
+    padding: 5px;
+    border-radius: 3px;
+}
+
+#remove {
+    background-color: #da4a4a;
+}
+
+
+
+
+
+
+
