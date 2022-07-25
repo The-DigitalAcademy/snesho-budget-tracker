@@ -1,87 +1,50 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>SINESIPHO</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
-</head>
-<body>
-  <!-- As a heading -->
-
-  <div class="Application">
-    <h1 class="header">BUDGET TRACKER</h1>
-    <br>  
-  <div class="balance-container">
-    <h4>YOUR BALANCE</h4>
-    <h1 id="balance">R0</h1>
-  </div>
-
-  <div class="cashflow-container">
-    <div class="income-container">
-      <h2>Income</h2>
-      <div id="income">R1200</div>
-    </div>
-
-    <div class="expense-container">
-      <h2>Expense</h2>
-      <div id="expense">R200</div>
-    </div>
-  </div>
-    <br>
-  <div class="btn-group">
-    <button class="incomeBtn" onClick="addIncome()">+ INCOME</button>
-    <button class="expenseBtn" onClick="addExpense()">- EXPENSE</button>
-  </div>
-   <br>
-
-  <!--history-->
-
-  <div class="transaction-container">
-    <h2>Transcation History</h2>
-
-    <ul id="transaction">
-      <li>
-        Salary
-        <div>
-          <span class="income-amt">R5000</span>
-          <i class="fa-solid fa-trash-can"></i>
+<html>
+    <head>
+        <title>SINESIPHO</title>
+        <link href="https://fonts.googleapis.com/css2?family=Rubik&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <div class="Application">
+            <h1>Budget Tracker</h1>
+          <br><br>
+            <div class="balance-container">
+                <h2>Balance</h2>
+                <div id="balance">R0</div>
+            </div>
+            <br><br>
+            <div class="cashflow-container">
+                <div class="income-container">
+                    <h2>Income</h2>
+                    <div id="income">R0</div>
+                </div>
+                <div class="expense-container">
+                    <h2>Expense</h2>
+                    <div id="expense">R0</div>
+                </div>
+            </div>
+            <br><br>
+            <div class="transaction-container">
+                <h2>Transaction History</h2>
+                <ul id="transaction">
+                    
+                </ul>
+            </div>
+            <br><br>
+            <div class="form-container">
+                <h2>Add new transaction</h2>
+                <form onsumbit="return false;">
+                    <label for="name">Name</label>
+                    <input id="name" type="text">
+                    <label for="amount">Amount</label>
+                    <input id="amount" type="number">
+                    <br><br>
+                    <button id="incomeBtn">Add Income</button>
+                    <button id="expenseBtn">Add Expense</button>
+                </form>
+            </div>
         </div>
-      </li>
-
-      <li>
-        Buy
-        <div>
-          <span class="expense-amt">R50</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </div>
-      </li>
-
-      <li>
-        Transport
-        <div>
-          <span class="expense-amt">R500</span>
-          <i class="fa-solid fa-trash-can"></i>
-        </div>
-      </li>
-    </ul>
-  </div>
-  <br>
-
-  <!--transaction-->
-
-  <div class="transaction">
-    <h2 id="transaction-title">Add New Transcation</h2>
-    <input type="text" id="text" class="for-text" placeholder="insert text here">
-    <br><br>
-    <input type="number" id="number" class="for-number" placeholder="insert text here">
-  </div>
-  <br>
-  <button>Add Transcation</button>
-</div>
-
-<script src="./script.js"></script>
-</body>
+        <script src="script.js"></script>
+    </body>
 </html>
