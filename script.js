@@ -3,9 +3,9 @@ var state = {
     income: 400,
     expense: 100,
     transactions: [
-        { name: 'Salary', amount: 1000, type: 'income' },
-        { name: 'Buy Grocery', amount: 50, type: 'expense' },
-        { name: 'Buy Guitar', amount: 500, type: 'expense' }
+        // { id: uniqueId(), name: 'Salary', amount: 1000, type: 'income' },
+        // { id: uniqueId(), name: 'Buy Grocery', amount: 50, type: 'expense' },
+        // { id: uniqueId(), name: 'Buy Guitar', amount: 500, type: 'expense' }
     ]
 }
 
@@ -23,21 +23,58 @@ function init() {
     initListeners();
 }
 
+function uniqueId() {
+    return Math.random(Math.random() * 1000000);
+}
+
 function initListeners() {
     incomeBtnEl.addEventListener('click', onAddIncomeClick);
     expenseBtnEl.addEventListener('click', onAddExpenseClick);
 }
 
 function onAddIncomeClick() {
-    var transaction = {
-        name: nameInputEl.value,
-        amount: parseInt(amountInputEl.value), type: 'income'
-    };
-
-    state.transactions.push(transaction);
-    updateState();
+    addTransaction(nameInputEl.value, amountInputEl.value, 'income');    
 }
 
+function addTransaction(name, amount, type) {
+    if (name !== '' && amount !== '') {
+        var transaction = {
+            id: uniqueId(),
+            name: name,
+            amount: parseInt(amount),
+            type: type
+        };
+
+        state.transactions.push(transaction);
+
+        updateState();
+    } else {
+        alert('Please enter valid data');
+    }
+
+    nameInputEl.value = '';
+    amountInputEl.value = '';   
+}
+
+function onAddExpenseClick() {
+    addTransaction(nameInputEl.value, amountInputEl.value, 'expense');
+} 
+
+function onDeleteClick(event) {
+    var id = parseInt(event.target.getAttribute('data-id'));
+    var deleteIndex;
+    for (var i = 0; i < state.transactions.length; i++) {
+        if (state.transactions[i].id === id) {
+            deleteIndex = i;
+            break;
+        }
+    }
+
+    state.transactions.splice(deleteIndex, 1);
+
+    updateState();
+}
+ 
 function updateState() {
     var balance = 0,
         income = 0,
@@ -60,6 +97,8 @@ function updateState() {
     state.income = income;
     state.expense = expense;
 
+    localStorage.setItem('SINESIPHO')
+
     render();
 }
 
@@ -69,6 +108,8 @@ function render() {
     expenseEl.innerHTML = `R${state.expense}`;
 
     var transactionEl, containerEl, amountEl, item, btnEl;
+
+    transactionEl.innerHTML = '';
 
     for (var i = 0; i < state.transactions.length; i++) {
         item = state.transactions[i];
@@ -89,7 +130,10 @@ function render() {
         containerEl.appendChild(amountEl);
 
         btnEl = document.createElement('button');
+        btnEl.setAttribute('data-id', item.id);
         btnEl.innerHTML = 'X';
+
+        btnEl.addEventListener('Click', onDeleteClick);
 
         containerEl.appendChild(btnEl);
 
