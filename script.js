@@ -3,9 +3,7 @@ var state = {
     income: 400,
     expense: 100,
     transactions: [
-        // { id: uniqueId(), name: 'Salary', amount: 1000, type: 'income' },
-        // { id: uniqueId(), name: 'Buy Grocery', amount: 50, type: 'expense' },
-        // { id: uniqueId(), name: 'Buy Guitar', amount: 500, type: 'expense' }
+        
     ]
 }
 
@@ -19,6 +17,12 @@ var nameInputEl = document.querySelector('#name');
 var amountEl = document.querySelector('#amount')
 
 function init() {
+    var localState = JSON.parse(localStorage.getItem('budget tracker'));
+
+    if (localState !== null) {
+        state = localState;
+    }
+
     updateState();
     initListeners();
 }
@@ -31,6 +35,8 @@ function initListeners() {
     incomeBtnEl.addEventListener('click', onAddIncomeClick);
     expenseBtnEl.addEventListener('click', onAddExpenseClick);
 }
+
+// DRY - Do not repeat yourself
 
 function onAddIncomeClick() {
     addTransaction(nameInputEl.value, amountInputEl.value, 'income');    
@@ -97,7 +103,7 @@ function updateState() {
     state.income = income;
     state.expense = expense;
 
-    localStorage.setItem('SINESIPHO')
+    localStorage.setItem('budget tracker', JSON.stringify(state))
 
     render();
 }
